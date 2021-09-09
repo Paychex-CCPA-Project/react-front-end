@@ -1,6 +1,8 @@
-import './App.css';
+
 import React from "react";
 import {Row} from "reactstrap";
+
+
 
 function RequestQ(){
 
