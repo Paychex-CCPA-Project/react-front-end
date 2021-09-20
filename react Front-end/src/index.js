@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css'
-import './index.css';
-import './RequestQ.css';
-import './Contacts.css';
+import './styles/App.css'
+import './styles/index.css';
+import './styles/RequestQ.css';
+import './styles/Contacts.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

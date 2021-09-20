@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import Personal from "./personal";
 import Address from "./Address";
 import RequestQ from "./RequestQ";
@@ -8,7 +8,13 @@ import { Container, Row, Col } from 'reactstrap';
 import ReCAPTCHA from "./reCAPTCHA";
 
 
-const App = ({title}) => {
+class App extends Component{
+    state = {
+
+    }
+
+
+render() {
 
   return (
       <div>
@@ -19,7 +25,7 @@ const App = ({title}) => {
                   {/*sections off the table for the components of the form*/}
                   <td>
                       <Row>
-                          <Col>{title}</Col>
+                          Personal Information Request Form
                       </Row>
                   </td>
               </tr>
@@ -59,8 +65,7 @@ const App = ({title}) => {
       </div>
   );
 }
-App.defaultProps = {
-    title: 'Personal Information Request Form'
 }
+
 
 export default App;

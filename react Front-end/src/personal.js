@@ -3,7 +3,7 @@ import $ from 'jquery'
 import {  Row } from 'reactstrap';
 
 
-const Personal=() =>{
+function Personal(){
 
     $('.palceholder').click(function() {
         $(this).siblings('input').focus();
@@ -54,7 +54,5 @@ const Personal=() =>{
     );
 
 }
-Personal.defaultProps = {
 
-}
 export default Personal;
