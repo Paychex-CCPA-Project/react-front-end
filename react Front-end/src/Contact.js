@@ -1,14 +1,22 @@
-import React, {Component} from "react";
+import React from "react";
 import {Row} from "reactstrap";
+import contactInfo from "./contactInfo";
+
+// this function maps the contacts section
+// file with contact array is in contactInfo.js
+function creatContact(contact){
+
+    return(
+        <span className="form-Adderess">
+            <input className={contact.id} type="text" required/>
+            <label>{contact.name}<span style={{color: "red"}}>*</span></label>
+        </span>
+    );
+}
 
 
-class Contact extends Component{
-    state = {
-        PhoneNumber: "",
-        EmailAddress: "",
-    }
-
-render(){
+// ----------------------------------------------------------
+function Contact(){
 
     return(
         <div>
@@ -16,18 +24,10 @@ render(){
                 Contact
             </th>
             <Row>
-                <span className="form-Adderess">
-                    <input className="address" type="text" required/>
-                    <label>Phone Number</label>
-                </span>
-                <span className="form-Adderess">
-                    <input className="address" type="text" required/>
-                    <label>Email Address</label>
-                </span>
+                {contactInfo.map(creatContact)}
             </Row>
         </div>
     );
-    }
 }
 
 export default Contact;

@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Request from "./Request";
 import { Container, Row, Col } from 'reactstrap';
 import ReCAPTCHA from "./reCAPTCHA";
+import Submit from "./submit";
 
 
 class App extends Component{
@@ -57,6 +58,7 @@ render() {
               <tr>
                   <td>
                         <ReCAPTCHA />
+                        <Submit />
                   </td>
               </tr>
           </table>
