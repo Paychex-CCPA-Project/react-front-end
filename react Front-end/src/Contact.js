@@ -16,6 +16,7 @@ function creatContact(contact){
 
 
 // ----------------------------------------------------------
+// this function will render the jsx tags
 function Contact(){
 
     return(
@@ -24,6 +25,7 @@ function Contact(){
                 Contact
             </th>
             <Row>
+                {/* this is where the map function is called and will render the elements */}
                 {contactInfo.map(creatContact)}
             </Row>
         </div>

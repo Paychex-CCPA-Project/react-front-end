@@ -23,19 +23,10 @@ class ReCAPTCHA extends Component{
     }
 
     render(){
+        // this function will render the jsx tags
     return (
             <div className="captchaDiv">
                 <form onSubmit={this.handleSubmit}>
-                <Row  action="?" method="POST">
-                    {/* Make the API call to google with the site key inorder to use the captcha */}
-                    <div className="center">
-                    <span className="g-recaptcha" data-sitekey="6Lf5L1AcAAAAAN8BwFvZHoNTyURSo7e-IuskSdBL" />
-
-                        <button type="submit" id="btn">Submit</button>
-                    </div>
-
-                </Row>
-
                 </form>
 
             </div>

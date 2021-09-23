@@ -15,11 +15,10 @@ function createPersonal(pd){
         </span>
     );
 }
+
 // ----------------------------------------------------------
-
-
+// this function will render the jsx tags
 function Personal(){
-
 
     return (
         <div>
@@ -28,6 +27,7 @@ function Personal(){
                 Personal Details
             </Row>
         </th>
+            {/* this is where the map function is called and will render the elements */}
             {personalData.map(createPersonal)}
         </div>
 

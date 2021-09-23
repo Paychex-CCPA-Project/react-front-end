@@ -1,25 +1,37 @@
-import React, {Component} from "react";
+import React, {Component, useCallback, useState} from "react";
 import Personal from "./personal";
 import Address from "./Address";
 import RequestQ from "./RequestQ";
 import Contact from "./Contact";
 import Request from "./Request";
-import { Container, Row, Col } from 'reactstrap';
+import "./styles/capthcaNav.css"
+import { Container, Row } from 'reactstrap';
+
 import ReCAPTCHA from "./reCAPTCHA";
-import Submit from "./submit";
 
 
-class App extends Component{
-    state = {
 
+
+function App(callback, deps){
+
+
+
+const [disableSubmit,setDisableSubmit] = useState(false);
+    const handleSubmit = event => {
+        event.preventDefault();
+        alert(`Your state values: \n 
+            email: \n 
+            You can replace this alert with your process`);
+    };
+    function sample(){
+        console.log("It worked")
     }
 
 
-render() {
-
-  return (
-      <div>
+    return (
+      <form onSubmit={sample} method="POST">
           <Container fluid >
+
               {/*creates the table for the form app*/}
           <table>
               <tr>
@@ -57,16 +69,30 @@ render() {
               </tr>
               <tr>
                   <td>
-                        <ReCAPTCHA />
-                        <Submit />
+                      <header className="header_nav">
+                              {/* Make the API call to google with the site key inorder to use the captcha */}
+                              <div className="center">
+                                  <span className="g-recaptcha" data-sitekey="6Lf5L1AcAAAAAN8BwFvZHoNTyURSo7e-IuskSdBL"
+                                        onChange={useCallback(() => setDisableSubmit(false))}/>
+                              </div>
+                          <nav>
+                              <ul className="nav_links">
+                                  <li><input type="checkbox" required /></li>
+                                  <li>I certify this data is accurate under penalty of perjury<span style={{color: "red"}}>*</span> </li>
+                                  <li ><input disabled={disableSubmit} type="submit" value="Submit"/></li>
+                              </ul>
+                      </nav>
+                      </header>
+
                   </td>
               </tr>
           </table>
+
          </Container>
 
-      </div>
+      </form>
   );
-}
+
 }
 
 
