@@ -6,7 +6,9 @@ const addressInfo = [
         key: "CA",
         name: "Address",
         id: "address",
-        type: "text"
+        type: "text",
+        initValue: "address1",
+        setValue: "setAddress1"
 
     },
     {
@@ -14,7 +16,9 @@ const addressInfo = [
         key: "CA",
         name: "Address two",
         id: "address",
-        type: "text"
+        type: "text",
+        initValue: "address2",
+        setValue: "setAddress2"
 
     },
     {
@@ -22,14 +26,18 @@ const addressInfo = [
         key: "CA",
         name: "City",
         id: "city",
-        type: "text"
+        type: "text",
+        initValue: "acity",
+        setValue: "setCity"
     },
     {
         class: "form-City",
         key: "CA",
         name: "Zip",
         id: "city",
-        type: "text"
+        type: "text",
+        initValue: "zip",
+        setValue: "Zip"
     }
 
 ]

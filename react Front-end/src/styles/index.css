@@ -32,28 +32,7 @@ label {
     border-bottom: 1px solid;
     width: 23%;
 }
-.form-Adderess{
-    position: relative;
-}
-.form-Adderess .address{
-    border:none;
-    position:relative;
-    border-bottom: 1px solid grey;
-    width: 40%;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right:45px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.form-Adderess label{
-    position: absolute;
-    right: 10px;
-    left: 15px;
-    top:1px;
 
-    color:grey
-}
 .form-City{
     position: relative;
 }

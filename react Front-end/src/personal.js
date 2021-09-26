@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles/personal.css"
 import personalData from "./personalData";
 import {  Row } from 'reactstrap';
@@ -7,10 +7,19 @@ import {  Row } from 'reactstrap';
 /// Map functions. File with arrays is personalData.js
 
 // returns personal html tag for the personal tabel data
-function createPersonal(pd){
+function CreatePersonal(pd){
+    // the useState will retrieve the data that is put into the input
+    // the useState returns 2 varibles  the varible that represents the initial state and a function that is used to
+    // set the altered state
+    const [personalInfo, setPersonalInfo] = useState("")
+    let data = personalInfo
+    console.log(data)
+// ----------------------------------------------------------
+
     return(
         <span className="form-personal">
-            <input className={pd.id} type={pd.type} required/>
+            {/* when the event "e" is change it will call the function to get the data the useState*/}
+            <input onChange={ e => setPersonalInfo(e.target.value)} className={pd.id} type={pd.type} required/>
             <label>{pd.name}<span style={{color: "red"}}>*</span></label>
         </span>
     );
@@ -28,7 +37,7 @@ function Personal(){
             </Row>
         </th>
             {/* this is where the map function is called and will render the elements */}
-            {personalData.map(createPersonal)}
+            {personalData.map(CreatePersonal)}
         </div>
 
     );
